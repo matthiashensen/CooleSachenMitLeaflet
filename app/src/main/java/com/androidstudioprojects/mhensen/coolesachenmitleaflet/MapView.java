@@ -24,10 +24,10 @@ public class MapView extends AppCompatActivity {
         setSupportActionBar(toolbar);
 
         WebView myWebView = (WebView) findViewById(R.id.webview);
-        myWebView.loadUrl("file:///assets/index.html");
         WebSettings webSettings = myWebView.getSettings();
         webSettings.setJavaScriptEnabled(true);
         myWebView.setWebViewClient(new WebViewClient());
+        myWebView.loadUrl("file:///android_asset/index.html");
 
         FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
         fab.setOnClickListener(new View.OnClickListener() {
